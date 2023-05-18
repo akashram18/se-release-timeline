@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Timeline</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <style>
+        #container {
+            min-width: 400px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'timeline'
+            },
+            xAxis: {
+                visible: false
+            },
+            yAxis: {
+                visible: false
+            },
+            title: {
+                text: 'Timeline of Release 10.0'
+            },
+            subtitle: {
+                text: 'Web/App'
+            },
+            series: [{
+                dataLabels: {
+                    connectorColor: 'silver',
+                    connectorWidth: 2
+                },
+                data: [{
+                    name: 'Release Deadline #1',
+                    label: 'May 03,2023',
+                    description: 'Portfolio Analytics Phase I,   Sector Rotation - Level II,Technical Peer Comparison,Download to CSV - Trending Stocks,4 New Chart Pattern Types,Weekly/Monthly EdgeChart'
+                }, {
+                    name: 'Release Deadline #2',
+                    label: 'May 05,2023 (delayed: 2 days)',
+                    description: 'Weekly/Monthly EdgeChart(Droped),Plans Page New UI(Added)'
+                }, {
+                    name: 'Release Deadline #3',
+                    label: 'May 11,2023 (delayed: 8 days)',
+                    description: 'Search Bar UI Change Under Home Page Banner(Added), OIDC(Added)'
+                }, {
+                    name: 'Release Deadline #4',
+                    label: 'May 18,2023 (delayed: 15 days)',
+                    description: 'Portfolio Critical Bugs(P1)'
+                },
+                {
+                    name: 'Release Deadline #5',
+                    label: 'May 25,2023 (delayed: 22 days)',
+                    description: 'Two Ppen Critical Bugs(P1)'
+                }]
+            }]
+        });
+    </script>
+</body>
+
+</html>
